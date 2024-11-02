@@ -1,0 +1,71 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: chartreuse;
+}
+
+.title-section{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.card-section{
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid darkslategrey;
+    border-radius: 10px;
+}
+
+.photo_profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about{
+    
+}
+
+.intro-about{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.desc-about{
+    text-align: right;
+    font-weight: bold;
+    font-size: small;
+}
+
+.project{
+}
+
+.card-project{
+    margin: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid darkslategrey;
+}
+
+.card-skill{
+    margin: 3px;
+    padding: 5px;
+    width: auto;
+}
+
+.title-skill{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact{
+
+}
+
+.social-icons{
+    width: 42px;
+    height: 42px;
+    margin: 5px;
+}
