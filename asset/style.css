@@ -1,0 +1,216 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: verdana, sans-serif;
+	font-size: large;
+}
+
+/* CSS variables for header/menu heights used on wider screens */
+:root {
+  --header-height: 56px;
+  --menu-height: 44px;
+}
+
+.header {
+	background: linear-gradient(to left, #f0f4ff, #809fff);
+	color: #222;
+	height: var(--header-height);
+	padding: 0 12px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.menu {
+ 	background: #e6ecff;
+ 	padding-left: 10px;
+ 	padding-top: 3px;
+ 	padding-bottom: 3px;
+ 	align-items: center;
+ 	box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.menu a {
+ 	text-decoration: none;
+ 	color: #111;
+ 	padding: 6px 10px;
+ 	font-size: 0.95rem;
+ 	display: inline-flex;
+ 	align-items: center;
+ 	gap: 8px;
+ 	border-radius: 4px;
+}
+
+.menu img {
+ 	width: 18px;
+ 	height: 18px;
+ 	display: block;
+}
+
+.menu span { line-height: 1; }
+
+.menu a:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.header img { width: 32px; height: 32px; display: block; }
+.header strong { color: #111; font-size: 1rem; }
+
+.layout {
+	display: flex;
+	width: 100%;
+	flex: 1; /* allow layout to grow so sidebar can stretch full height */
+}
+
+.side-menu {
+	background: #e6ecff;
+	padding: 5px;
+	width: 15%;
+	vertical-align: top;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	height: 100%; /* default - overridden on wider screens for sticky behaviour */
+}
+
+.category-menu {
+	padding: 5px;
+	display: block;
+}
+
+.title-menu-side {
+	font-size: small;
+	font-style: bold;
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 2px;
+}
+
+.list-menu-side {
+	font-size: small;
+	display: block;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	color: blue;
+}
+
+.content {
+	padding: 10px;
+	width: 85%;
+	vertical-align: top;
+	display: flex;
+	flex-direction: column; /* allow footer to stick to bottom when content is short */
+}
+
+.content .footer {
+	margin-top: auto; /* push footer to bottom when there's extra space */
+}
+
+.left-menu {
+	padding: 5px;
+	width: 20%;
+}
+
+.text-small {
+	font-size: small;
+}
+
+.border-default{
+	border-style: solid;
+	border-width: thin;
+	border-color: #2f2f2f;
+}
+
+.footer{
+	background-color: #809fff;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Responsive adjustments */
+/* Desktop: make header and menu fixed and side-menu sticky */
+@media (min-width: 769px) {
+	body {
+		padding-top: calc(var(--header-height) + var(--menu-height));
+	}
+
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: var(--header-height);
+		padding-left: 10px;
+		padding-right: 10px;
+		z-index: 1000;
+	}
+
+	.menu {
+		position: fixed;
+		top: var(--header-height);
+		left: 0;
+		right: 0;
+		height: var(--menu-height);
+		display: flex;
+		align-items: center;
+		z-index: 999;
+		padding-left: 10px;
+	}
+
+	/* Make side-menu stick beneath the fixed header/menu and scroll independently if content long */
+	.side-menu {
+		position: sticky;
+		top: calc(var(--header-height) + var(--menu-height) + 10px);
+		height: calc(100vh - (var(--header-height) + var(--menu-height) + 20px));
+		overflow: auto;
+	}
+
+	/* Ensure layout content width accounts for side-menu width */
+	.content {
+		width: calc(100% - 15%);
+	}
+}
+@media (max-width: 768px) {
+	.layout {
+		flex-direction: column;
+	}
+
+	.side-menu {
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.menu {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	.menu a {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.header img {
+		width: 28px;
+		height: 28px;
+	}
+}

@@ -1,62 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fx directory</title>
-    
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="fx directory - koleksi artikel, library, dan proyek sederhana seputar hardware, pemrograman, dan retro tech.">
+    <meta property="og:title" content="fx directory - Home">
+    <meta property="og:description" content="Koleksi tutorial, library, dan proyek berfokus pada alat dan teknik sederhana untuk kebutuhan sehari-hari.">
+    <title>Home</title>
+    <link rel="stylesheet" href="asset/style.css" type="text/css">
 </head>
+
 <body>
-    <!-- header -->
-    <div></div>
-    <section class="card-section about">
-        <img src="assets/image/image_profile.png" alt="profile image fx directory" class="photo_profile">
-        <h1 class="intro-about">Hi I'm, fx directory</h1>
-        <h3>fullstack developer</h3>
-        <p class="desc-about">Saya adalah seorang fullstack developer dengan semangat
-             untuk menciptakan teknologi sederhana namun efisien. 
-             Saya menguasai berbagai teknologi seperti PHP Native, VB .NET, dan MySQL 
-             untuk membangun aplikasi web dan desktop yang dinamis dan efisien.
-        </p>
-    </section>
-    <section class="card-section project">
-        <h3 class="title-section">My Projects</h3>
-        <div class="card-project">
-            <img src="project_1.png" alt="project 1">
-            <h4>Project 1</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel sollicitudin convallis, nulla justo iaculis neque, et efficitur erat neque vel nunc. Nulla facilisi.</p>
+
+    <div class="header">
+        <img src="asset/image/logo_fx-new.png" width="32" height="32" alt="logo-fx-directory"/>
+        <strong>fx directory</strong>
+    </div>
+
+    <div class="menu border-default">
+        <a href="index.html">
+            <img src="asset/icon/home.png" alt="icon-home" />
+            <span>Home |</span>
+        </a>
+        <a href="library.html">
+            <img src="asset/icon/library.png" alt="icon-library">
+            <span>Library |</span>
+        </a>
+        <a href="project.html">
+            <img src="asset/icon/project.png" alt="icon-project">
+            <span>Project |</span>
+        </a>
+        <a href="tools.html">
+            <img src="asset/icon/tools.png" alt="icon-tools">
+            <span>Tools |</span>
+        </a>
+        <a href="about.html">
+            <img src="asset/icon/about.png" alt="icon-info">
+            <span>About</span>
+        </a>
+    </div>
+    <div class="layout">
+        <div class="side-menu border-default">
+            <div class="category-menu">
+                <label class="title-menu-side"><strong>Library</strong></label>
+                <a href="library.html" class="list-menu-side">-> Hardware</a>
+                <a href="library.html" class="list-menu-side">-> Programing</a>
+                <a href="library.html" class="list-menu-side">-> Fundamental</a>
+                <a href="library.html" class="list-menu-side">-> Science</a>
+                <a href="library.html" class="list-menu-side">-> Having fun</a>
+            </div>
+            <div class="category-menu">
+                <label class="title-menu-side"><strong>Directory</strong></label>
+                <a href="project.html" class="list-menu-side">-> Mini Kasir Desktop</a>
+                <a href="project.html" class="list-menu-side">-> Retro Comp</a>
+                <a href="project.html" class="list-menu-side">-> Pocket</a>
+                <a href="project.html" class="list-menu-side">-> Network Tools</a>
+                <a href="project.html" class="list-menu-side">-> Windows Tools</a>
+            </div>
+            <div class="category-menu">
+                <label class="title-menu-side"><strong>Links</strong></label>
+                <a href="https://www.facebook.com" target="_blank" class="list-menu-side">-> Youtube</a>
+                <a href="https://www.youtube.com" target="_blank" class="list-menu-side">-> Instagram</a>
+                <a href="https://github.com/fxdirectory" target="_blank" class="list-menu-side">-> Github</a>
+            </div>
         </div>
-        <div class="card-project">
-            <img src="project_2.png" alt="project 2">
-            <h4>Project 2</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel sollicitudin convallis, nulla justo iaculis neque, et efficitur erat neque vel nunc. Nulla facilisi.</p>
+
+        <div class="content">
+            <img src="asset/banner.jpg" alt="Banner fx directory - ilustrasi" />
+            <h5>Welcome</h5>
+            <p class="text-small">selamat datang di situs kami, di situs kami hanya menyediakan apa yang diperlukan saja
+                dengan alat bantu yang sangat usang untuk dipakai zaman modern anda. semoga bisa membantu anda
+                menyelesaikan
+                permasalahan anda</p>
+
+            <div>
+                <h5>Home and News</h5>
+                <ul class="text-small">
+                    <li><a href="#">PC anda sering hang, ini solusinya...</a></li>
+                    <li><a href="#">Antisipasi keamana data dengan cara mudah ini...</a></li>
+                    <li><a href="#">Rakit PC dengan budget murah dan efisien...</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Top Libraries</h5>
+                <ul class="text-small">
+                    <li><a href="#">Module PC</a></li>
+                    <li><a href="#">C++ Programing fundamental</a></li>
+                    <li><a href="#">Bash Script for Windows</a></li>
+                </ul>
+            </div>
+
+            <div class="footer border-default">
+                <span>fx directory © 2024</span>
+            </div>
         </div>
-        <div class="card-project">
-            <img src="project_2.png" alt="project 2">
-            <h4>Project 3</h4>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel sollicitudin convallis, nulla justo iaculis neque, et efficitur erat neque vel nunc. Nulla facilisi.</p>
-        </div>
-    </section>
-    <section class="card-section skill">
-        <h3 class="title-section">My Skills and Tools</h3>
-        <div class="list-skill">
-                <img src="assets/image/html.png" alt="html" class="icon-skill">
-                
-            <img src="assets/image/css.png" alt="css" class="icon-skill">
-            <img src="assets/image/php.png" alt="php" class="icon-skill">
-            <img src="assets/image/codeigniter.png" alt="codeignither" class="icon-skill">
-            <img src="assets/image/net.png" alt="vb net" class="icon-skill">
-            <img src="assets/image/mysql.png" alt="mysql" class="icon-skill">
-        </div>
-    </section>
-    <section class="card-section contact">
-        <h3 class="title-section">contact me</h3>
-        
-        <a href=""><img src="assets/image/whatsapp.png" alt="whatsapp" class="social-icons"></a>
-        <a href=""><img src="assets/image/gmail.png" alt="email" class="social-icons"></a>
-        <a href=""><img src="assets/image/instagram.png" alt="instagram" class="social-icons"></a>
-        
-    </section>
+    </div>
+
 </body>
+
 </html>
